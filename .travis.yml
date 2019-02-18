@@ -1,7 +1,6 @@
 language: node_js
 node_js:
   - "8"
-  - "9"
 services: mongodb
 cache:
   directories:
@@ -13,7 +12,7 @@ script:
   - npm test
 deploy:
   - provider: script
-  skip_cleanup: true
-  script: chmod +x ./deploy.sh && ./deploy.sh
-  on:
-    branch: master
+    skip_cleanup: true
+    script: chmod +x ./deploy.sh && ./deploy.sh
+    on:
+      branch: master
